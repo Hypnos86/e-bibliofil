@@ -1,3 +1,7 @@
 <app-header></app-header>
-<p>home works!</p>
+<ul>
+  <li *ngFor="let item of menuContent">
+    <app-menu-item [title]="item.title" [url]="item.url"></app-menu-item>
+  </li>
+</ul>
 <app-footer></app-footer>
