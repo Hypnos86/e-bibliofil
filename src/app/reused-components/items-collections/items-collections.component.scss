@@ -1,0 +1,20 @@
+@import "../../../variables.scss";
+div {
+  border: 1px solid $blue;
+  border-radius: 10px;
+  span {
+    padding: 2px;
+    color: darkslategrey;
+  }
+  a {
+  }
+
+  &:hover {
+    background: linear-gradient(to top right, $beige, $old-rose);
+    border: none;
+
+    span {
+      color: $dark-blue;
+    }
+  }
+}

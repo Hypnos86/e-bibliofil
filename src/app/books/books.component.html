@@ -1,8 +1,12 @@
 <app-header></app-header>
 <app-title-display title="{{ componentTitle }}"></app-title-display>
-<app-items-collections
-  *ngFor="let object of collections"
-  [title]="object.title"
-  [href]="object.href"
->
-</app-items-collections>
+
+<section class="row">
+  <app-items-collections
+    class="col-md-4"
+    *ngFor="let object of collections"
+    [title]="object.title"
+    [href]="object.href"
+  >
+  </app-items-collections>
+</section>
