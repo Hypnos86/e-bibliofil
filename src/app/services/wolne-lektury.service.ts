@@ -1,6 +1,8 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { BooksInterface } from "./interfaces/books-interface";
+import { BooksInterface } from "../shared/interfaces/books-interface";
+import { CollectionsInterface } from "../shared/interfaces/collections-interface";
+import { AuthorsInterface } from "../shared/interfaces/authors-interface";
 
 @Injectable({
   providedIn: "root",
@@ -10,14 +12,15 @@ export class WolneLekturyService {
 
   constructor(private http: HttpClient) {}
 
-  getAllBooks() {
-    const url = `${this.api}/books/?limit=100&offset=0/`;
+  getAllBooks(page: number = 1, pageSize: number = 20) {
+    const offset = (page - 1) * pageSize;
+    const url = `${this.api}/books/?limit=${pageSize}&offset=${offset}/`;
     return this.http.get<BooksInterface[]>(url);
   }
 
   getAllAuthors() {
     const url = `${this.api}/authors/`;
-    return this.http.get(url);
+    return this.http.get<AuthorsInterface[]>(url);
   }
 
   getAllEpochs() {
@@ -33,5 +36,10 @@ export class WolneLekturyService {
   getAllKinds() {
     const url = `${this.api}/kinds/`;
     return this.http.get(url);
+  }
+
+  getAllCollections() {
+    const url = `${this.api}/collections/`;
+    return this.http.get<CollectionsInterface[]>(url);
   }
 }

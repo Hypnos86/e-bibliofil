@@ -1,0 +1,16 @@
+/* Globalne style dla linków */
+a {
+    text-decoration: none; /* Usuwa domyślne podkreślenie */
+    color: #007bff; /* Domyślny kolor linków */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Podkreśla link po najechaniu myszką */
+  }
+  
+  /* Stylowanie linków wewnątrz listy */
+  .link-list a {
+    display: block; /* Ustawia linki jako blokowe, aby zajmowały całą szerokość kontenera */
+    padding: 8px 0; /* Dodaje odstęp na górze i na dole linków */
+  }
+  

@@ -1,31 +1,42 @@
+import { CollectionsInterface } from "../shared/interfaces/collections-interface";
 import { CommonModule } from "@angular/common";
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { HeaderComponent } from "../home/header/header.component";
-import { WolneLekturyService } from "../wolne-lektury.service";
-import { BooksInterface } from "../interfaces/books-interface";
+import { TitleDisplayComponent } from "../reused-components/title-display/title-display.component";
+import { WolneLekturyService } from "../services/wolne-lektury.service";
+import { ItemsCollectionsComponent } from "../reused-components/items-collections/items-collections.component";
+import { MenuItemsInterface } from "../shared/interfaces/menu-items-interface";
+import { menuItems } from "../shared/data/menu-items";
 
 @Component({
   selector: "app-books",
   standalone: true,
-  imports: [CommonModule, HeaderComponent],
+  imports: [
+    CommonModule,
+    HeaderComponent,
+    ItemsCollectionsComponent,
+    TitleDisplayComponent,
+  ],
   templateUrl: "./books.component.html",
   styleUrl: "./books.component.scss",
 })
 export class BooksComponent implements OnInit {
-  books: BooksInterface[] = [];
-
   constructor(private wolneLekturyService: WolneLekturyService) {}
 
-  getBooks(): void {
+  componentTitle: string = menuItems[0].title;
+
+  collections: CollectionsInterface[] = [];
+
+  getCollections(): void {
     this.wolneLekturyService
-      .getAllBooks()
-      .subscribe((response: BooksInterface[]) => {
-        this.books = response.slice(0, 50);
+      .getAllCollections()
+      .subscribe((response: CollectionsInterface[]) => {
+        this.collections = response;
         console.log(response);
       });
   }
 
   ngOnInit(): void {
-    this.getBooks();
+    this.getCollections();
   }
 }

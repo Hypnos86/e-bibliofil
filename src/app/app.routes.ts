@@ -9,7 +9,7 @@ import { GenresComponent } from "./genres/genres.component";
 import { KindsComponent } from "./kinds/kinds.component";
 
 export const routes: Routes = [
-  { path: "home", component: HomeComponent },
+  { path: "home", component: HomeComponent,  },
   { path: "books", component: BooksComponent },
   { path: "authors", component: AuthorsComponent },
   { path: "literary-themes", component: ThemesComponent },

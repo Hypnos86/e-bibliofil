@@ -1,4 +1,8 @@
 <app-header></app-header>
-<ul>
-  <li *ngFor="let book of books">{{ book.title}}</li>
-</ul>
+<app-title-display title="{{ componentTitle }}"></app-title-display>
+<app-items-collections
+  *ngFor="let object of collections"
+  [title]="object.title"
+  [href]="object.href"
+>
+</app-items-collections>

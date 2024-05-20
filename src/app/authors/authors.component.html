@@ -1,1 +1,5 @@
 <app-header></app-header>
+<app-title-display [title]="componentTitle"></app-title-display>
+<ul *ngFor="let author of authors">
+    <li>{{author.name}}</li>
+</ul>
