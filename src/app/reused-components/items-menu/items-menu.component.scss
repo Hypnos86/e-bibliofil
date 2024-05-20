@@ -1,0 +1,32 @@
+@import "../../../variables.scss";
+
+a {
+  display: block;
+  text-decoration: none;
+  cursor: auto;
+  /* color: black; */
+  margin: 30px;
+
+  li {
+    display: inline-block;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    font-size: 1.2rem;
+    color: $yellow;
+    background-color: $dark-blue;
+    cursor: pointer;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+      background: linear-gradient(to top right, $old-rose, $yellow);
+      color: $dark-blue;
+    }
+  }
+}

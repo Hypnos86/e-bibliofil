@@ -1,13 +1,12 @@
 import { Component } from "@angular/core";
-import { FooterComponent } from "./footer/footer.component";
 import { HeaderComponent } from "./header/header.component";
 import { CommonModule } from "@angular/common";
-import { ItemsMenuComponent } from "../items-menu/items-menu.component";
+import { ItemsMenuComponent } from "../reused-components/items-menu/items-menu.component";
 
 @Component({
   selector: "app-home",
   standalone: true,
-  imports: [CommonModule, HeaderComponent, FooterComponent, ItemsMenuComponent],
+  imports: [CommonModule, HeaderComponent, ItemsMenuComponent],
   templateUrl: "./home.component.html",
   styleUrl: "./home.component.scss",
 })

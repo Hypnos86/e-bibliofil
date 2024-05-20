@@ -1,7 +1,5 @@
-
 import { CommonModule } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
-import { FooterComponent } from "../home/footer/footer.component";
 import { HeaderComponent } from "../home/header/header.component";
 import { WolneLekturyService } from "../wolne-lektury.service";
 import { BooksInterface } from "../interfaces/books-interface";
@@ -9,7 +7,7 @@ import { BooksInterface } from "../interfaces/books-interface";
 @Component({
   selector: "app-books",
   standalone: true,
-  imports: [CommonModule, HeaderComponent, FooterComponent],
+  imports: [CommonModule, HeaderComponent],
   templateUrl: "./books.component.html",
   styleUrl: "./books.component.scss",
 })
