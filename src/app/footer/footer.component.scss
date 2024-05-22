@@ -1,3 +1,50 @@
+// footer {
+//   position: fixed;
+//   right: 0;
+//   left: 0;
+//   bottom: 0;
+//   z-index: 100;
+// }
+.bg-dark {
+  background-color: #212529;
+  color: white;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px; /* Opcjonalnie: dodaje odstęp między elementami */
+}
+
+.form-input {
+  max-width: 500px; /* Opcjonalnie: ustawia maksymalną szerokość dla inputów i textarea */
+  width: 100%; /* Ustawia szerokość na 100% kontenera */
+}
+
+.btn-submit {
+  align-self: center; /* Wycentrowuje przycisk w formularzu */
+}
+
+/* Dodatkowe style dla lepszego wyglądu */
+.form-text {
+  margin-right: 10px;
+}
+
+textarea.form-input {
+  resize: vertical; /* Pozwala na pionowe skalowanie textarea */
+}
+
+.social-media {
+  list-style: none;
+}
+
 //svg {
 //   transition: transform 0.5s;
 // }

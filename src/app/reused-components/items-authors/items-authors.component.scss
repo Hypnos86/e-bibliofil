@@ -1,11 +1,11 @@
 @import "../../../variables.scss";
-header {
-  background-color: $green;
-  h2 {
+ul {
+  list-style: none;
+  li {
+    width: 350px;
     a {
-      flex: 1;
-      color: #c2c28c;
       text-decoration: none;
+      color: $dark-blue;
       cursor: pointer;
     }
   }

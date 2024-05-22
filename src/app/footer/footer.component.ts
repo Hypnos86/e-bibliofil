@@ -9,5 +9,4 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 contactEmail:string = "info@ksiazki.pl"
-emailSymbol:string = "@";
 }

@@ -3,6 +3,7 @@ import { Injectable } from "@angular/core";
 import { BooksInterface } from "../shared/interfaces/books-interface";
 import { CollectionsInterface } from "../shared/interfaces/collections-interface";
 import { AuthorsInterface } from "../shared/interfaces/authors-interface";
+import { Observable } from "rxjs/internal/Observable";
 
 @Injectable({
   providedIn: "root",
@@ -21,6 +22,15 @@ export class WolneLekturyService {
   getAllAuthors() {
     const url = `${this.api}/authors/`;
     return this.http.get<AuthorsInterface[]>(url);
+  }
+
+  getAuthor(authorSlug: string) {
+    const url = `${this.api}/authors/${authorSlug}}`;
+    return this.http.get(url);
+  }
+
+  getAuthorDetails(authorSlug: string): Observable<any> {
+    return this.http.get<any>(`${this.api}/${authorSlug}/`);
   }
 
   getAllEpochs() {

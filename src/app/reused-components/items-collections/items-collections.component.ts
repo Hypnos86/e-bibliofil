@@ -1,5 +1,6 @@
 import { CommonModule } from "@angular/common";
 import { Component, Input } from "@angular/core";
+import { CollectionsInterface } from "../../shared/interfaces/collections-interface";
 
 @Component({
   selector: "app-items-collections",
@@ -11,4 +12,5 @@ import { Component, Input } from "@angular/core";
 export class ItemsCollectionsComponent {
   @Input() href?: string;
   @Input() title?: string;
+  @Input() collections?: CollectionsInterface[] = [];
 }

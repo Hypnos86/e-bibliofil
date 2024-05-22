@@ -1,6 +1,8 @@
 <app-header></app-header>
-<ul class="options">
-  <li *ngFor="let item of menuContent">
-    <app-items-menu [title]="item.title" [url]="item.url"></app-items-menu>
-  </li>
-</ul>
+<nav class="d-flex justify-content-center align-items-center">
+  <ul class="options">
+    <li *ngFor="let item of menuContent">
+      <app-items-menu [title]="item.title" [url]="item.url"></app-items-menu>
+    </li>
+  </ul>
+</nav>

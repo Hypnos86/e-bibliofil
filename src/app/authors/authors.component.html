@@ -1,5 +1,18 @@
 <app-header></app-header>
-<app-title-display [title]="componentTitle"></app-title-display>
-<ul *ngFor="let author of authors">
-    <li>{{author.name}}</li>
-</ul>
+
+<app-title-display title="{{ componentTitle }}"></app-title-display>
+<section *ngIf="!selectedAuthor; else authorDetails">
+    <app-items-authors [authors]="authors"></app-items-authors>
+</section>
+
+<ng-template #authorDetails>
+    <div>
+        <!-- Wyświetl szczegółowe dane o wybranym autorze -->
+        <!-- Tutaj możesz użyć dyrektywy ngIf lub ngSwitch, aby wyświetlić szczegóły autora -->
+        <!-- Przykładowo: -->
+        <!-- <h2>{{ selectedAuthor.name }}</h2> -->
+        <!-- <p>{{ selectedAuthor.bio }}</p> -->
+        <h2></h2>
+        <button >Wróć</button> <!-- Przycisk do powrotu -->
+    </div>
+</ng-template>
