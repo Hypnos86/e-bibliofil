@@ -1,6 +1,4 @@
-<ul *ngFor="let author of authors; let i = index">
+
   <li>
-    {{ i + 1 }}:
-    <a href="#">{{ author.name }}</a>
+    <button (click)="onAuthorClick()">{{ author.name }}</button>
   </li>
-</ul>

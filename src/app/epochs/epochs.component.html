@@ -1,2 +1,10 @@
 <app-header></app-header>
 <app-title-display [title]="componentTitle"></app-title-display>
+
+<div *ngIf="epochs.length > 0">
+    <ul>
+      <li *ngFor="let epoch of epochs">
+        <button (click)="showEpochDetails(epoch.slug)">{{ epoch.name }}</button>
+      </li>
+    </ul>
+  </div>

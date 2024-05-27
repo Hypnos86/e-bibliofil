@@ -1,0 +1,9 @@
+{
+    "/api": {
+      "target": "https://wolnelektury.pl",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }
+  

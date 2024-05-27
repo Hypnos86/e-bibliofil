@@ -1,0 +1,11 @@
+<app-header></app-header>
+<div *ngIf="epoch">
+  <app-title-display [title]="epoch.name"></app-title-display>
+    <p *ngIf="epoch.description else elseBlock" [innerHTML]="epoch.description"></p>
+  </div>
+
+  <ng-template #elseBlock>
+    <!-- Zawartość do wyrenderowania gdy warunek jest fałszywy -->
+  
+    <h3 class="text-center">Brak danych :(</h3> 
+  </ng-template>

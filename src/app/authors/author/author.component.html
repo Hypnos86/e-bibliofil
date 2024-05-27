@@ -1,1 +1,6 @@
-<p>author works!</p>
+<app-header></app-header>
+<div *ngIf="author">
+  <app-title-display [title]="author.name"></app-title-display>
+  <p [innerHTML]="author.description"></p>
+</div>
+

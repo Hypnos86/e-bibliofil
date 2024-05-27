@@ -1,6 +1,6 @@
 import { CommonModule } from "@angular/common";
 import { AuthorsInterface } from "./../../shared/interfaces/authors-interface";
-import { Component, Input } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 
 @Component({
   selector: "app-items-authors",
@@ -10,5 +10,10 @@ import { Component, Input } from "@angular/core";
   styleUrl: "./items-authors.component.scss",
 })
 export class ItemsAuthorsComponent {
-  @Input() authors: AuthorsInterface[] = [];
+  @Input() author!: AuthorsInterface;
+  @Output() authorClick = new EventEmitter<string>();
+
+  onAuthorClick(): void {
+    this.authorClick.emit(this.author.slug);
+  }
 }

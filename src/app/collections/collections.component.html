@@ -1,0 +1,10 @@
+<app-header></app-header>
+<app-title-display title="{{ componentTitle }}"></app-title-display>
+
+<section class="row">
+  <div class="col-3 text-center m-3" *ngFor="let collection of collections">
+    <button (click)="onBooksSelected(collection.href)">
+      {{ collection.title }}
+    </button>
+  </div>
+</section>

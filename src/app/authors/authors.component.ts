@@ -24,10 +24,8 @@ export class AuthorsComponent implements OnInit {
   constructor(private service: WolneLekturyService, private router: Router) {}
 
   componentTitle: string = menuItems[1].title;
-
   authors: AuthorsInterface[] = [];
-
-  selectedAuthor: AuthorsInterface | null = null; 
+  selectedAuthor: AuthorsInterface | null = null;
 
   getAuthors(): void {
     this.service.getAllAuthors().subscribe((response: AuthorsInterface[]) => {
@@ -40,4 +38,7 @@ export class AuthorsComponent implements OnInit {
     this.getAuthors();
   }
 
+  onAuthorSelected(authorSlug: string): void {
+    this.router.navigate(["/author", authorSlug]);
+  }
 }
