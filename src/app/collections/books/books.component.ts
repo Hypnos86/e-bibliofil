@@ -9,6 +9,7 @@ import { ItemsCollectionsComponent } from "../../reused-components/items-collect
 import { MenuItemsInterface } from "../../shared/interfaces/menu-items-interface";
 import { menuItems } from "../../shared/data/menu-items";
 import { ActivatedRoute } from "@angular/router";
+import { ItemBackBtnComponent } from "../../reused-components/item-back-btn/item-back-btn.component";
 
 @Component({
   selector: "app-books",
@@ -18,6 +19,7 @@ import { ActivatedRoute } from "@angular/router";
     HeaderComponent,
     ItemsCollectionsComponent,
     TitleDisplayComponent,
+    ItemBackBtnComponent,
   ],
   templateUrl: "./books.component.html",
   styleUrl: "./books.component.scss",
@@ -29,7 +31,7 @@ export class BooksComponent implements OnInit {
   ) {}
 
   componentTitle?: string;
-
+  backBtn: string = "collections";
   books: BooksInterface[] = [];
   description?: string;
 

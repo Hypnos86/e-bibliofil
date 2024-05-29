@@ -1,11 +1,12 @@
 <app-header></app-header>
 
 <app-title-display title="{{ componentTitle }}"></app-title-display>
-<section>
-  <ul *ngFor="let author of authors">
-    <app-items-authors
-      [author]="author"
-      (authorClick)="onAuthorSelected($event)"
-    ></app-items-authors>
-  </ul>
+
+<section class="d-flex justify-content-center flex-wrap">
+  <app-items-authors
+    class="col-3 text-center m-3"
+    *ngFor="let author of authors"
+    [author]="author"
+    (authorClick)="onAuthorSelected($event)"
+  ></app-items-authors>
 </section>

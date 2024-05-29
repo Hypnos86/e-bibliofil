@@ -1,10 +1,18 @@
 <app-header></app-header>
-<app-title-display title="{{ componentTitle }}"></app-title-display>
-<h4>Pozycji: {{books.length}}</h4>
+<div class="row">
+  <div class="col-md-2 align-content-center">
+    <app-item-back-btn class="d-flex justify-content-center" [componentPath]="backBtn"></app-item-back-btn>
+  </div>
+  <div class="col-md-8">
+    <app-title-display title="{{ componentTitle }}"></app-title-display>
+  </div>
+</div>
+
+<h4>Pozycji: {{ books.length }}</h4>
 
 <p [innerHTML]="description"></p>
 <section class="row">
   <ul *ngFor="let book of books">
-    <li>{{ book.title }} - {{book.kind}}</li>
+    <li>{{ book.title }} - {{ book.kind }}</li>
   </ul>
 </section>

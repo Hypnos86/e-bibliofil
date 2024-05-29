@@ -23,7 +23,7 @@ import { Router } from "@angular/router";
 })
 export class CollectionsComponent {
   constructor(private service: WolneLekturyService, private router: Router) {}
-
+  
   componentTitle: string = menuItems[0].title;
 
   collections: CollectionsInterface[] = [];

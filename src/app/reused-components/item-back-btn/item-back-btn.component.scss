@@ -1,0 +1,14 @@
+a {
+  text-decoration: none;
+  background-color: brown;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+  padding: 6px;
+  transition: transform 0.5s;
+  &:hover {
+    transform: scale(1.2);
+    color: brown;
+    background-color: whitesmoke;
+    border: 1px solid brown;
+  }
+}
