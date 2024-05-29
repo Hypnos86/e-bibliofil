@@ -1,7 +1,8 @@
 <app-header></app-header>
+<app-item-back-btn class="m-3" [componentPath]="backBtn"></app-item-back-btn>
 <div *ngIf="epoch">
   <app-title-display [title]="epoch.name"></app-title-display>
-    <p *ngIf="epoch.description else elseBlock" [innerHTML]="epoch.description"></p>
+    <p class="mx-5" *ngIf="epoch.description else elseBlock" [innerHTML]="epoch.description"></p>
   </div>
 
   <ng-template #elseBlock>

@@ -7,6 +7,7 @@ import { AuthorsInterface } from "../shared/interfaces/authors-interface";
 import { ItemsAuthorsComponent } from "../reused-components/items-authors/items-authors.component";
 import { TitleDisplayComponent } from "../reused-components/title-display/title-display.component";
 import { Router } from "@angular/router";
+import { ItemBackBtnComponent } from "../reused-components/item-back-btn/item-back-btn.component";
 
 @Component({
   selector: "app-authors",
@@ -15,7 +16,7 @@ import { Router } from "@angular/router";
     CommonModule,
     HeaderComponent,
     TitleDisplayComponent,
-    ItemsAuthorsComponent,
+    ItemsAuthorsComponent
   ],
   templateUrl: "./authors.component.html",
   styleUrl: "./authors.component.scss",
@@ -26,6 +27,7 @@ export class AuthorsComponent implements OnInit {
   componentTitle: string = menuItems[1].title;
   authors: AuthorsInterface[] = [];
   selectedAuthor: AuthorsInterface | null = null;
+  
 
   getAuthors(): void {
     this.service.getAllAuthors().subscribe((response: AuthorsInterface[]) => {

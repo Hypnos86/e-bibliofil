@@ -1,6 +1,7 @@
 <app-header></app-header>
+<app-item-back-btn class="m-3" [componentPath]="backBtn"></app-item-back-btn>
 <div *ngIf="author">
   <app-title-display [title]="author.name"></app-title-display>
-  <p [innerHTML]="author.description"></p>
+  <p class="m-5" [innerHTML]="author.description"></p>
 </div>
 

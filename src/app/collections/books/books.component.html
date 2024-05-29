@@ -1,17 +1,20 @@
 <app-header></app-header>
 <div class="row">
   <div class="col-md-2 align-content-center">
-    <app-item-back-btn class="d-flex justify-content-center" [componentPath]="backBtn"></app-item-back-btn>
+    <app-item-back-btn
+      class="d-flex justify-content-center"
+      [componentPath]="backBtn"
+    ></app-item-back-btn>
   </div>
   <div class="col-md-8">
     <app-title-display title="{{ componentTitle }}"></app-title-display>
   </div>
 </div>
-
-<h4>Pozycji: {{ books.length }}</h4>
-
-<p [innerHTML]="description"></p>
-<section class="row">
+<div class="mx-5 mb-2">
+  <h4>Pozycji: {{ books.length }}</h4>
+</div>
+<p class="mx-5" [innerHTML]="description"></p>
+<section class="container">
   <ul *ngFor="let book of books">
     <li>{{ book.title }} - {{ book.kind }}</li>
   </ul>
